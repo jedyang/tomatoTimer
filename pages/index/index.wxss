@@ -1,0 +1,103 @@
+/**index.wxss**/
+.container {
+  display: flex;
+  /*占满父元素*/
+  height: 50%;
+  flex-direction: column;
+  /*overflow: hidden; */
+}
+
+.timer_main {
+  /* position: relative; */
+  /* display: flex; */
+  flex: 2; /*控制空间的占比*/
+  /* justify-content: center;
+  align-items: center;
+  text-align: center; */
+  background-color: #3197ed;
+  /* transition: all .5s; */
+  /* z-index: 1;
+  padding: 10px 0; */
+}
+
+.timer_footer {
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  flex: 1;
+  background-color: yellow;
+  /* transition: all .3s; */
+}
+
+.timer_time-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  transition: all .3s;
+}
+
+.timer_progress_mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 3px solid #1589eb;
+  opacity: .5;
+  border-radius: 50%;
+}
+
+.timer_left {
+  left: 0;
+}
+
+.timer_circle {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  transition: all .3s;
+}
+
+.timer_circle--left {
+  left: 0;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: rotate(45deg);
+}
+
+.timer_circle--right {
+  right: 0;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: rotate(-45deg);
+}
+
+.timer_time {
+  font-size: 40px;
+  color: #fff;
+  font-weight: lighter;
+  transition: font-size .3s;
+}
+
+.timer .timer_ctrl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  color:  #fff;
+  width: 80px;
+  height: 80px;
+  margin: 0 20px;
+  border-radius: 50%;
+  transition: all .7s;
+  background-color: #48c23d;
+}
+

@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container timer">
+ <view class="timer_main">
+ </view>
+
+ 	<view class="timer_footer">
+	</view>
+</view>

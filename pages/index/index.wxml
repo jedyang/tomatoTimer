@@ -1,8 +1,13 @@
 <!--index.wxml-->
 <view class="container timer">
- <view class="timer_main">
- </view>
+  <view class="timer_main">
+    <view class='timer_time-wrap'>
+    <view class='timer_progress_mask'>
+    <view class='timer_progress timer_left'></view>
+    </view>
+    </view>
+  </view>
 
- 	<view class="timer_footer">
-	</view>
+  <view class="timer_footer">
+  </view>
 </view>

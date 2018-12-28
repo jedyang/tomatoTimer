@@ -2,18 +2,18 @@
 .container {
   display: flex;
   /*占满父元素*/
-  height: 50%;
+  height: 100%;
   flex-direction: column;
   /*overflow: hidden; */
 }
 
 .timer_main {
-  /* position: relative; */
-  /* display: flex; */
+  display: flex; /*这是其内部组件的容器*/
+  position: relative;
   flex: 2; /*控制空间的占比*/
-  /* justify-content: center;
-  align-items: center;
-  text-align: center; */
+  justify-content: center; /* 子组件的水平方向对齐方式 */ 
+  align-items: center;/* 子组件垂直方向的对齐方式*/
+  text-align: center; /**/
   background-color: #3197ed;
   /* transition: all .5s; */
   /* z-index: 1;
@@ -21,7 +21,6 @@
 }
 
 .timer_footer {
-  /* display: flex; */
   /* justify-content: center;
   align-items: center; */
   flex: 1;
@@ -30,25 +29,31 @@
 }
 
 .timer_time-wrap {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;/*为了给timer_progress_mask提供定位*/
   width: 150px;
   height: 150px;
-  text-align: center;
-  transition: all .3s;
+  background-color: green;
 }
 
 .timer_progress_mask {
+  position: absolute;  /*absolute  绝对定位，是找第一个不是static的父元素去定位的 */
+  top: 0px; /* 设为0 让边框贴着外边框，通过父元素限定大小*/
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border: 3px solid gold;
+  /* opacity: .5; */
+  border-radius: 50%; /*对于正方形，50%的弧度就是圆了*/
+}
+
+.timer_progress {
   position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border: 3px solid #1589eb;
-  opacity: .5;
-  border-radius: 50%;
+  width: 75px;
+  height: 150px;
+  overflow: hidden;
+  transition: all .3s;
+  background-color: pink;
 }
 
 .timer_left {
